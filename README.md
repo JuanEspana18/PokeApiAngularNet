@@ -22,7 +22,6 @@ Proyecto de portafolio construido con **ASP.NET Core Web API (.NET 10)** + **Ang
 pokemon-fullstack-portfolio/
   backend/
   frontend/
-  IMPLEMENTATION_ORDER.md
   README.md
 ```
 
@@ -32,9 +31,9 @@ pokemon-fullstack-portfolio/
 - Node.js: **20.19+**
 - Angular CLI: **21.x**
 
-## 🚀 Puesta en marcha
+## 🚀 Instalación y ejecución
 
-### Backend (Terminal 1)
+### ⚙️ Backend (Terminal 1)
 
 ```bash
 cd backend
@@ -56,7 +55,7 @@ dotnet run --project ./src/PokemonPortfolio.Api/PokemonPortfolio.Api.csproj
 - Swagger: `http://localhost:5000/swagger`
 - Health check: `https://localhost:5001/health`
 
-### Frontend (Terminal 2)
+### 🖥️ Frontend (Terminal 2)
 
 ```bash
 cd frontend/pokemon-app
@@ -83,13 +82,13 @@ Puedes validar que todo funciona correctamente con estas pruebas rápidas:
 1. **Backend activo**  
    Abre Swagger en `https://localhost:5001/swagger` y verifica que carga la documentación.
    
-   ![Evidencia de Swagger activo](docs/swagger.png)
+   ![Evidencia de Swagger activo](https://github.com/JuanEspana18/PokeApiAngularNet/blob/main/Docs/Swagger.png)
 2. **Consulta de Pokémon por ID o nombre**  
    Prueba `GET /api/pokemon/25` o `GET /api/pokemon/pikachu` y confirma que devuelve información.
 3. **Frontend conectado al backend**  
    Abre `http://localhost:4200`, realiza una búsqueda y comprueba que muestra resultados.
    
-   ![Evidencia del frontend conectado al backend](docs/Poke.png)
+   ![Evidencia del frontend conectado al backend](https://github.com/JuanEspana18/PokeApiAngularNet/blob/main/Docs/Poke.png)
 4. **Salud del servicio**  
    Consulta `GET /health` y valida una respuesta satisfactoria.
 
@@ -116,5 +115,5 @@ Desarrollado por **Juan Felipe España Arias** como parte de un proyecto de port
 
 Si te gusta este proyecto, no olvides darle una estrella en GitHub:
 
-[![⭐ Dale una estrella en GitHub](https://img.shields.io/badge/%E2%AD%90-Dale_una_estrella_en_GitHub-yellow?style=for-the-badge)](https://github.com/)
+[![⭐ Dale una estrella en GitHub](https://img.shields.io/badge/%E2%AD%90-Dale_una_estrella_en_GitHub-yellow?style=for-the-badge)](https://github.com/JuanEspana18/PokeApiAngularNet)
 
