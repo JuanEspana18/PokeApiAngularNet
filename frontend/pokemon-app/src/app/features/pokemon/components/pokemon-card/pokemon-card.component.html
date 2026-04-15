@@ -1,0 +1,54 @@
+<section class="card">
+  <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+    <img
+      [src]="pokemon.imageUrl"
+      [alt]="pokemon.name"
+      style="width: 220px; max-width: 100%; border-radius: 20px; background: rgba(255,255,255,0.08); padding: 12px;"
+    />
+
+    <div style="flex: 1;">
+      <p class="muted" style="margin: 0;">#{{ pokemon.id }}</p>
+      <h2 style="margin-top: 4px; text-transform: capitalize;">{{ pokemon.name }}</h2>
+
+      <div class="chips" style="margin: 16px 0;">
+        <span class="chip" *ngFor="let type of pokemon.types">{{ type.name }}</span>
+      </div>
+
+      <div class="grid" style="grid-template-columns: repeat(2, minmax(120px, 1fr));">
+        <div>
+          <p class="muted">Height</p>
+          <strong>{{ pokemon.height }}</strong>
+        </div>
+        <div>
+          <p class="muted">Weight</p>
+          <strong>{{ pokemon.weight }}</strong>
+        </div>
+        <div>
+          <p class="muted">Color</p>
+          <strong>{{ pokemon.color }}</strong>
+        </div>
+        <div>
+          <p class="muted">Habitat</p>
+          <strong>{{ pokemon.habitat }}</strong>
+        </div>
+        <div>
+          <p class="muted">Legendary</p>
+          <strong>{{ pokemon.isLegendary ? 'Yes' : 'No' }}</strong>
+        </div>
+        <div>
+          <p class="muted">Mythical</p>
+          <strong>{{ pokemon.isMythical ? 'Yes' : 'No' }}</strong>
+        </div>
+      </div>
+
+      <div style="margin-top: 16px;">
+        <p class="muted" style="margin-bottom: 8px;">Abilities</p>
+        <div class="chips">
+          <span class="chip" *ngFor="let ability of pokemon.abilities">
+            {{ ability.name }}<span *ngIf="ability.isHidden"> (hidden)</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

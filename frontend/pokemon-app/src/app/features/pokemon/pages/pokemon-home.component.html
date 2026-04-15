@@ -1,0 +1,35 @@
+<div class="container">
+  <section class="card" style="margin-bottom: 20px;">
+    <p class="muted" style="margin: 0 0 8px;">ASP.NET Core + Angular + PokeAPI</p>
+    <h1 style="margin-top: 0;">Pokémon Explorer</h1>
+
+    <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px;">
+      <input
+        [(ngModel)]="searchTerm"
+        placeholder="Busca por nombre o id"
+        style="flex: 1 1 280px; min-width: 280px; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--border); background: #0b1220; color: white;"
+      />
+      <button
+        type="button"
+        (click)="search()"
+        style="padding: 12px 18px; border-radius: 12px; border: 0; cursor: pointer; background: var(--accent); color: #111827; font-weight: 700;"
+      >
+        Buscar
+      </button>
+    </div>
+  </section>
+
+  <p *ngIf="facade.loading()">Cargando...</p>
+  <p *ngIf="facade.error()" class="error">{{ facade.error() }}</p>
+
+  <ng-container *ngIf="facade.pokemon() as pokemon">
+    <div class="grid grid-2">
+      <app-pokemon-card [pokemon]="pokemon"></app-pokemon-card>
+
+      <div class="grid">
+        <app-pokemon-stats [stats]="pokemon.stats"></app-pokemon-stats>
+        <app-pokemon-evolution [evolutionChain]="pokemon.evolutionChain"></app-pokemon-evolution>
+      </div>
+    </div>
+  </ng-container>
+</div>

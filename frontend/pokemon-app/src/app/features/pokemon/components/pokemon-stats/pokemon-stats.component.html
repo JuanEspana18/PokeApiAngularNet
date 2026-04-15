@@ -1,0 +1,17 @@
+<section class="card">
+  <h3 style="margin-top: 0;">Stats</h3>
+
+  <div *ngFor="let stat of stats" style="margin-bottom: 12px;">
+    <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+      <span style="text-transform: capitalize;">{{ stat.name }}</span>
+      <strong>{{ stat.value }}</strong>
+    </div>
+
+    <div style="height: 10px; border-radius: 999px; background: #0b1220; overflow: hidden;">
+      <div
+        [style.width.%]="stat.value > 100 ? 100 : stat.value"
+        style="height: 100%; background: var(--accent);"
+      ></div>
+    </div>
+  </div>
+</section>

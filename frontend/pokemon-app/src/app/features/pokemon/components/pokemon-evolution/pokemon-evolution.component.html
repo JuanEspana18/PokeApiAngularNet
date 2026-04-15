@@ -1,0 +1,10 @@
+<section class="card">
+  <h3 style="margin-top: 0;">Evolution chain</h3>
+
+  <div class="chips">
+    <ng-container *ngFor="let item of evolutionChain; let last = last">
+      <span class="chip">{{ item.name }}</span>
+      <span *ngIf="!last" class="muted" style="align-self: center;">→</span>
+    </ng-container>
+  </div>
+</section>
